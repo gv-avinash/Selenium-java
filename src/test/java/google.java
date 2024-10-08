@@ -21,7 +21,9 @@ public class google {
 		d.findElement(By.id("_fZl")).click();
 		d.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		d.findElement(By.partialLinkText("sign up for a Gmail account - Google")).click();
+		System.out.println("Clicked");
 		//add comment
+		//webhook
 	}
 
 }
