@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: a3tierarchitecture
+  labels:
+    app: a3tierarchitecture
+    kubernetes.azure.com/generator: devhub
+  namespace: namespace-workflow-1732608286218
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: a3tierarchitecture
+  template:
+    metadata:
+      labels:
+        app: a3tierarchitecture
+    spec:
+      containers:
+        - name: a3tierarchitecture
+          image: K8sClusterregistry.azurecr.io/image11:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8888
